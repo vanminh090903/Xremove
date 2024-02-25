@@ -7,15 +7,14 @@
 // @match        *://twitter.com/*
 // @match        *://x.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
-// @updateURL    https://raw.githubusercontent.com/vanminh090903/Xremove/main/xremove.js
-// @downloadURL  https://raw.githubusercontent.com/vanminh090903/Xremove/main/xremove.js
+// @updateURL    https://github.com/vanminh090903/Xremove/releases/download/test/Xremove.ja
+// @downloadURL  https://github.com/vanminh090903/Xremove/releases/download/test/Xremove.ja
 // @grant        none
 // ==/UserScript==
 
 (function() {
 	'use strict';
 	console.log("start")
-test1
 	function remove() {
 
 		// Lấy tất cả các thẻ div có chứa role="group"
