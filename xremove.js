@@ -13,7 +13,7 @@
 (function() {
 	'use strict';
 	console.log("start")
-
+test1
 	function remove() {
 
 		// Lấy tất cả các thẻ div có chứa role="group"
