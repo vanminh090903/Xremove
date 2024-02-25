@@ -7,6 +7,8 @@
 // @match        *://twitter.com/*
 // @match        *://x.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
+// @updateURL    https://raw.githubusercontent.com/vanminh090903/Xremove/main/xremove.js
+// @downloadURL  https://raw.githubusercontent.com/vanminh090903/Xremove/main/xremove.js
 // @grant        none
 // ==/UserScript==
 
