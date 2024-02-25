@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         remove element
 // @namespace    http://tampermonkey.net/
-// @version      2024-02-23
+// @version      1.1
 // @description  try to take over the world!
 // @author       You
 // @match        *://twitter.com/*
