@@ -16,7 +16,15 @@
 	'use strict';
 	console.log("start")
 	function remove() {
+// Select the div element with aria-label containing "Follow "
+const element = document.querySelector('div[aria-label*="Follow "]');
 
+// Check if the element exists
+if (element) {
+  // Remove the element
+  element.remove();
+  console.log("Element removed.");
+}
 		// Lấy tất cả các thẻ div có chứa role="group"
 		let divs = document.querySelectorAll("div[role='group']");
 		// Duyệt qua từng thẻ div và xoá nó khỏi DOM
