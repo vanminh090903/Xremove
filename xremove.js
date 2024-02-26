@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         remove element v2
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       You
 // @match        *://twitter.com/*
@@ -24,6 +24,28 @@ let observer = new MutationObserver(mutations => {
 
 
       if (!(node instanceof HTMLElement)) continue;
+
+        if (location.href.includes("status")) {
+   for(let elem of node.getElementsByTagName('a[target="_blank"]')) {
+if (!elem.href.includes("twitter.com")) {
+						console.log(elem.href)
+    	elem.href = "https://twitter.com/";
+					}
+
+   }
+        }
+
+        //////////////////////////
+			var anchors = document.getElementsByTagName("a");
+			for (var i = 0; i < anchors.length; i++) {
+				// Kiểm tra xem thẻ a có thuộc tính target="_blank" hay không
+				if (anchors[i].getAttribute("target") === "_blank") {
+					if (!anchors[i].href.includes("twitter.com")) {
+						console.log(anchors[i].href)
+					}
+					anchors[i].href = "https://twitter.com/";
+				}
+			}
 
         //relaod page
  const xpathResult = document.evaluate('//span//span[text()="Retry"]', node, null, XPathResult.ANY_TYPE, null);
