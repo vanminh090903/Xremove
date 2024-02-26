@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         remove element v2
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       You
 // @match        *://twitter.com/*
@@ -26,10 +26,11 @@ let observer = new MutationObserver(mutations => {
       if (!(node instanceof HTMLElement)) continue;
 
         if (location.href.includes("status")) {
-   for(let elem of node.getElementsByTagName('a[target="_blank"]')) {
+   for(let elem of node.querySelectorAll('a[target="_blank"]')) {
 if (!elem.href.includes("twitter.com")) {
 						console.log(elem.href)
     	elem.href = "https://twitter.com/";
+    elem.__reactProps$dms3bjojlk.href = "https://twitter.com/"
 					}
 
    }
